@@ -1,0 +1,23 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+*{
+    font-family: "saira", sans-serif;
+    
+}
+body{
+    background: white;
+}
+.back-glob{
+    background-color:rgb(253, 246, 240);
+}
+
+.bottom-p{
+    bottom: 70px !important;
+    margin-right: 16px !important;
+}
+
+#mapDetail{
+    height: 500px;
+    background-color: #ccc;
+    margin-bottom: 5px;
+}
