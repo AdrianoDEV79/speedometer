@@ -1,14 +1,14 @@
+
+
 const params = new URLSearchParams(window.location.search)
 const rideID = params.get("id")
 const ride = getRideRecords(rideID)
 
 
-
-
 document.addEventListener("DOMContentLoaded", async () => {
 
     const firstPosition = ride.data[0]
-    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.altitude)
+    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longetude)
 
     const dataElement = document.createElement("div")
     dataElement.className = "flex-fill d-flex flex-column"
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     const lat = firstPosition.latitude;
-    const lon = firstPosition.altitude;
+    const lon = firstPosition.longetude;
     
 
     const map = L.map('mapDetail').setView([lat, lon], 13)
