@@ -64,6 +64,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const polyline = L.polyline(positionsArray, "#F00")
     polyline.addTo(map)
-    map.fitBounds(polyline.getBounds())
+    map.fitBounds(polyline.getBounds())addTo(map);
 
 })
