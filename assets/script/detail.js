@@ -8,7 +8,7 @@ const ride = getRideRecords(rideID)
 document.addEventListener("DOMContentLoaded", async () => {
 
     const firstPosition = ride.data[0]
-    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longitude)
+    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longetude)
 
     const dataElement = document.createElement("div")
     dataElement.className = "flex-fill d-flex flex-column"
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     distanceDiv.innerText = `Distância: ${getDistance(ride.data)}`
 
     const durationDiv = document.createElement("div")
-    durationDiv.innerText = `Duração: ${getDuration(ride.data)}`
+    durationDiv.innerText = `Duração: ${getDuration(ride)}`
 
     const dateDiv = document.createElement("div")
     dateDiv.innerText = getStartDate(ride)
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     const lat = firstPosition.latitude;
-    const lon = firstPosition.longitude;
+    const lon = firstPosition.longetude;
     
 
     const map = L.map('mapDetail').setView([lat, lon], 13)

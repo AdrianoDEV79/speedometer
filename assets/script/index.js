@@ -20,7 +20,7 @@ allRides.forEach(async([id, value])=>{
     })
 
     const firstPosition = ride.data[0]
-    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longitude)
+    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longetude)
 
     const mapElement = document.createElement("div")
     mapElement.style = "width:100px;height:100px"
@@ -42,7 +42,7 @@ allRides.forEach(async([id, value])=>{
     distanceDiv.innerText = `Distância: ${getDistance(ride.data)}`
 
     const durationDiv = document.createElement("div")
-    durationDiv.innerText = `Duração: ${getDuration(ride.data)}`
+    durationDiv.innerText = `Duração: ${getDuration(ride)}`
 
     const dateDiv = document.createElement("div")
     dateDiv.innerText = getStartDate(ride)
