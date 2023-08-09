@@ -20,7 +20,7 @@ allRides.forEach(async([id, value])=>{
     })
 
     const firstPosition = ride.data[0]
-    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longetude)
+    const firstLocationData = await getLocationDate(firstPosition.latitude, firstPosition.longitude)
 
     const mapElement = document.createElement("div")
     mapElement.style = "width:100px;height:100px"

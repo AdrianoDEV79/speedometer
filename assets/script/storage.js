@@ -36,9 +36,9 @@ function addPosition(rideID, position) {
         altitudeAccuracy: position.coords.altitudeAccuracy,
         heading: position.coords.heading,
         latitude: position.coords.latitude,
-        longetude: position.coords.longetude,
+        longitude: position.coords.longitude,
         speed: position.coords.speed,
-        timesTamp: position.timesTamp
+        timesTamp: position.timestamp
     }
     rideRecords.data.push(newDate)
     saveRideRecords(rideID, rideRecords)
