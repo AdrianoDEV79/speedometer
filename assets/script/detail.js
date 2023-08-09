@@ -49,12 +49,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         deleteRide(rideID)
         window.location.href = "./"
     })
-
-    const lat = firstPosition.latitude;
-    const lon = firstPosition.longetude;
     
 
-    const map = L.map('mapDetail').setView([lat, lon], 13)
+    const map = L.map('mapDetail').setView([firstPosition.latitude, firstPosition.longitude], 13)
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -62,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     const positionsArray = ride.data.map((position => {
-        return [lat, lon]
+        return [firstPosition.latitude, firstPosition.longitude]
     }))
 
     const polyline = L.polyline(positionsArray, "#F00")
