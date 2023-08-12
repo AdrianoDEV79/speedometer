@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const deleteBtn = document.querySelector("#deleteBtn")
 
     deleteBtn.addEventListener("click", () => {
+        if(confirm("Deseja excluir este registro?"))
         deleteRide(rideID)
         window.location.href = "./"
     })
