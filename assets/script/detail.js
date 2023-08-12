@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
 
     const map = L.map('mapDetail').setView([firstPosition.latitude, firstPosition.longitude], 13)
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
